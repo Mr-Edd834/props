@@ -1,22 +1,17 @@
-
-
 import React from 'react';
 import Player from './player.js';
-import players from '../data/players.js';
-import { Container, Row, Col } from 'react-bootstrap';
+import players from './players.js';
+import './Player.css'; // Assuming you have some styles for Player component
+import { Row } from 'react-bootstrap';
 
-const PlayerList = () => {
+const PlayersList = () => {
   return (
-    <Container>
-      <Row>
-        {players.map((player, index) => (
-          <Col key={index} sm={12} md={6} lg={4} xl={3}>
-            <Player {...player} />
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    <Row className="justify-content-center">
+      {players.map((player, index) => (
+        <Player key={index} {...player} />
+      ))}
+    </Row>
   );
 };
 
-export default PlayerList;
+export default PlayersList;

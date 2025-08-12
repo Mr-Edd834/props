@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import PlayersList from './components/PlayersList';
 import React from 'react';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import PlayersList from './components/PlayersList';
+
 function App() {
   return (
     <div className="App">
-      <h1 className="text-center my-4">FIFA Player Cards</h1>
+      <h1 className="my-4">Football Stars</h1>
       <PlayersList />
     </div>
   );
